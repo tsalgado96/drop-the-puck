@@ -11,22 +11,72 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+/*
+===============================================
+GLOBAL STYLING
+===============================================
+*/
 * {
   /*font-family: 'Droid Serif', serif;*/
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
 }
+
 html, body{
-  background: #ebebeb;
+  background: #dfdfdf;
+}
+
+.blue {
+  color: #0038A8;
+}
+
+
+/*
+===============================================
+MAIN NAVIGATION
+===============================================
+*/
+
+/* Nav links */
+.blog-nav-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 300;
+  font-size: 18px;
+  color: #fff;
+}
+.blog-nav-item:hover,
+.blog-nav-item:focus {
+  color: #0038A8;
+  text-decoration: none;
+}
+
+/* Active state gets a caret at the bottom */
+.blog-nav .active {
+  color: #fff;
+}
+.blog-nav .active:after {
+  color: #0038A8;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -5px;
+  vertical-align: middle;
+  content: " ";
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid;
+  border-left: 5px solid transparent;
 }
 
 .navbar{
-  background: rgba(0, 0, 0, 0.65);
-  z-index: 9999999;
+  background: rgba(0, 0, 0, 0.9);
 }
 
-.navbar a {
+.navbar a, .navbar-header a {
   color: #fff;
 }
 
@@ -35,12 +85,26 @@ html, body{
   margin: 0;
 }
 
+.navbar .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
 .navbar-nav li {
   font-size: 18px;
 }
 
+ul.nav a:hover {
+  background: none;
+}
+
+
+/*
+===============================================
+HERO LANDING SECTION
+===============================================
+*/
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('img/hero.jpg');
+  background: url('img/hero.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -48,12 +112,13 @@ html, body{
   height: 100vh;
 }
 
-.hero-text {
-  padding-top: 175px;
+.gradient-bg {
+  height: inherit;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9));
 }
 
-.blue {
-  color: #0038A8;
+.hero-text {
+  padding-top: 175px;
 }
 
 .hero-text h1 {
@@ -74,7 +139,7 @@ html, body{
   font-weight: 300;
 }
 
-.hero-text button{
+.hero-text .btn{
   background-color: #0038A8;
   border: none;
   margin-top: 10px;
@@ -91,4 +156,24 @@ html, body{
 
 .test {
   height: 100vh;
+}
+
+
+/*
+===============================================
+POSTS
+===============================================
+*/
+.blog-main {
+  background: #ebebeb;
+  margin: 25px 0;
+}
+
+.post {
+  margin: 50px 0;
+}
+
+.post-thumb img{
+  width: 100%;
+  height: auto;
 }
