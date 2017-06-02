@@ -44,6 +44,20 @@
 
           <!-- Collect the nav links, forms, and other content for toggling -->
          <div class="blog-nav collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
+           <?php
+             wp_nav_menu( array(
+               'menu'              => 'primary',
+               'theme_location'    => 'primary',
+               'depth'             => 2,
+               'container'         => 'div',
+               'container_class'   => 'collapse navbar-collapse blog-nav-item',
+               'container_id'      => 'bs-example-navbar-collapse-1',
+               'menu_class'        => 'nav navbar-nav navbar-right',
+               'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+               'walker'            => new WP_Bootstrap_Navwalker())
+             );
+           ?>
+           <!--
             <ul class="nav navbar-nav navbar-right">
               <li><a class="blog-nav-item active" href="<?php echo home_url();?>">Home</a></li>
               <li><a class="blog-nav-item" href="#">Podcast</a></li>
@@ -52,6 +66,7 @@
               <li><a class="blog-nav-item" href="#">Analysis</a></li>
               <li><a class="blog-nav-item" href="#">Rumors</a></li>
             </ul>
+          -->
           </div><!-- /.navbar-collapse -->
 
         </div><!-- /.container-fluid -->

@@ -3,7 +3,7 @@
     <section class="hero">
       <div class="gradient-bg">
         <div class="hero-text container">
-          <h1 class="hero-heading"><i class="fa fa-microphone blue"></i> Drop The <span class="">Puck</span></h1>
+          <h1 class="hero-heading"><i class="fa fa-podcast blue"></i> Drop The <span class="">Puck</span></h1>
           <p>New Episode Every Week</p>
           <div class="hero-description">
             <p>Pedro Rodrigues and Justin Starr talk about the latest news in the NHL. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -37,8 +37,23 @@
               <?php wp_reset_postdata(); ?>
             <?php endif; ?>
         </div><!-- /.blog-main -->
-        <div class="col-sm-4">
+        <div class="col-sm-3 podcasts text-center">
           <h1 class="text-center">Podcasts</h1>
+
+          <div class="row">
+            <img src="<?php bloginfo('template_url'); ?>/img/logo.jpg" alt="Podcast Logo">
+            <span class="podcast-heading blue">Episode #2</span>
+            <br>
+            <span class="podcast-title">Stanley Cup Playoffs</span>
+          </div>
+
+          <div class="row">
+            <img src="<?php bloginfo('template_url'); ?>/img/logo.jpg" alt="Podcast Logo">
+            <span class="podcast-heading">Episode #1</span>
+            <br>
+            <span class="podcast-title">The Pilot</span>
+          </div>
+
         </div>
       </div><!-- /.row -->
     </div><!-- /.container -->

@@ -31,6 +31,10 @@ html, body{
   color: #0038A8;
 }
 
+.container {
+  padding: 0 15px;
+}
+
 
 /*
 ===============================================
@@ -47,8 +51,8 @@ MAIN NAVIGATION
   font-size: 18px;
   color: #fff;
 }
-.blog-nav-item:hover,
-.blog-nav-item:focus {
+.blog-nav a:hover,
+.blog-nav a:focus {
   color: #0038A8;
   text-decoration: none;
 }
@@ -158,6 +162,34 @@ HERO LANDING SECTION
   height: 100vh;
 }
 
+
+/*
+===============================================
+FRONT PAGE PODCASTS SECTION
+===============================================
+*/
+.podcasts {
+  margin: 25px 10px;
+  background: #ebebeb;
+  padding: 0 25px;
+}
+
+.podcasts .row {
+  margin: 15px 0;
+}
+
+.podcasts img {
+  width: 100%;
+  height: auto;
+}
+
+.podcasts .podcast-heading {
+  font-size: 22px;
+}
+
+.podcasts .podcast-title {
+  font-size: 16px;
+}
 
 /*
 ===============================================
