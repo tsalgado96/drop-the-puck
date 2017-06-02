@@ -32,9 +32,14 @@ html, body{
 }
 
 .container {
-  padding: 0 15px;
+  padding: 0 25px;
 }
 
+.section-heading {
+  font-weight: 300;
+  font-size: 2em;
+  color: #4d4d4d;
+}
 
 /*
 ===============================================
@@ -133,7 +138,7 @@ HERO LANDING SECTION
 }
 @media screen and (max-width: 800px) {
   .hero-text h1{
-    font-size: 10vw;
+    font-size: 8vw;
   }
 }
 
@@ -142,11 +147,24 @@ HERO LANDING SECTION
   font-size: 1.9em;
   font-weight: 300;
 }
+@media screen and (max-width: 800px) {
+  .hero-text p{
+    font-size: 4vw;
+  }
+}
 
 .hero-text .btn{
   background-color: #0038A8;
   border: none;
   margin-top: 10px;
+  -webkit-transition: background-color .3s ease, color .3s ease;
+  transition: background-color .3s ease, color .3s ease;
+}
+
+.hero-text .btn:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #0038A8;
 }
 
 .hero-description {
@@ -169,7 +187,7 @@ FRONT PAGE CAROUSEL
 ===============================================
 */
 .carousel {
-  margin: 0 auto;
+  margin: 35px auto 35px auto ;
   width: 100%;
 }
 
@@ -178,18 +196,10 @@ FRONT PAGE CAROUSEL
   width: 100%;
 }
 
-.carousel-inner .item {
-
-}
-
 .carousel-inner .item img{
   margin: 0 auto;
   width: 100%;
-  opacity: .7;
-}
-
-a.carousel-control {
-
+  opacity: .6;
 }
 
 
@@ -232,7 +242,7 @@ POSTS
 }
 
 .post {
-  margin: 50px 0;
+  margin: 0 0 50px 0;
 }
 
 .post-thumb img{

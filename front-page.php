@@ -18,18 +18,8 @@
       <div class="row">
         <div class="col-sm-8 blog-main">
 
-
-
-
-
-
-
-
-
-
-
-
-
+          <!--<h1 class="text-center section-heading">Featured Posts</h1>-->
+        <!-- Start Carousel -->
           <?php if(is_front_page()) {?>
           <?php query_posts('showposts=3&post_type=post'); ?>
 
@@ -55,11 +45,11 @@
               <?php if (has_post_thumbnail()) {
                 $url = wp_get_attachment_url(get_post_thumbnail_id());
               ?>
-                <img src="<?php echo $url; ?>" alt="<?php the_title(); ?>">
+                <a href="<?php the_permalink(); ?>" role="button"><img src="<?php echo $url; ?>" alt="<?php the_title(); ?>"></a>
               <?php } ?>
                 <div class="carousel-caption">
                   <h1><?php the_title(); ?></h1>
-                  <p><a class="btn btn-lg btn-primary" href="<?php the_permalink(); ?>" role="button">Read More...</a></p>
+
                 </div>
               </div>
             <?php endwhile; endif; ?>
@@ -76,25 +66,9 @@
             </a>
           </div>
           <?php } wp_reset_query(); ?>
+        <!-- ./ Carousel -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <h1 class="text-center">Most Recent</h1>
+          <!--<h1 class="text-center section-heading">Most Recent</h1>-->
           <?php $args = array("posts_per_page" => 5); ?>
           <?php $wp_query = new WP_Query($args); ?>
           <?php
@@ -116,13 +90,13 @@
             <?php endif; ?>
         </div><!-- /.blog-main -->
         <div class="col-sm-3 podcasts text-center">
-          <h1 class="text-center">Podcasts</h1>
+          <h1 class="text-center section-heading">Latest Podcasts</h1>
 
           <div class="row">
             <img src="<?php bloginfo('template_url'); ?>/img/logo.jpg" alt="Podcast Logo">
-            <span class="podcast-heading blue">Episode #2</span>
+            <span class="podcast-heading">Episode #2</span>
             <br>
-            <span class="podcast-title">Stanley Cup Playoffs</span>
+            <span class="podcast-title">Stanley Cup Final &amp; More!</span>
           </div>
 
           <div class="row">

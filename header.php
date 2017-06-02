@@ -39,7 +39,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php echo home_url();?>"><h3>What The Puck <span class="blue">?!</span></h3></a>
+            <a class="navbar-brand" href="<?php echo home_url(); ?>"><h3>What The Puck <span class="blue">?!</span></h3></a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,16 +57,7 @@
                'walker'            => new WP_Bootstrap_Navwalker())
              );
            ?>
-           <!--
-            <ul class="nav navbar-nav navbar-right">
-              <li><a class="blog-nav-item active" href="<?php echo home_url();?>">Home</a></li>
-              <li><a class="blog-nav-item" href="#">Podcast</a></li>
-              <li><a class="blog-nav-item" href="#">Blog</a></li>
-              <li><a class="blog-nav-item" href="#">News</a></li>
-              <li><a class="blog-nav-item" href="#">Analysis</a></li>
-              <li><a class="blog-nav-item" href="#">Rumors</a></li>
-            </ul>
-          -->
+
           </div><!-- /.navbar-collapse -->
 
         </div><!-- /.container-fluid -->
