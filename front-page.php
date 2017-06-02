@@ -13,9 +13,87 @@
       </div>
     </section>
 
+    <!-- Start Main Post Loop -->
     <div class="container">
       <div class="row">
         <div class="col-sm-8 blog-main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <?php if(is_front_page()) {?>
+          <?php query_posts('showposts=3&post_type=post'); ?>
+
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+              <?php if (have_posts() ) : while (have_posts() ) : the_post(); $i++; ?>
+
+              <?php if ($i==1) { ?>
+              <div class="item active">
+              <?php } else { ?>
+              <div class="item">
+              <?php } ?>
+
+              <?php if (has_post_thumbnail()) {
+                $url = wp_get_attachment_url(get_post_thumbnail_id());
+              ?>
+                <img src="<?php echo $url; ?>" alt="<?php the_title(); ?>">
+              <?php } ?>
+                <div class="carousel-caption">
+                  <h1><?php the_title(); ?></h1>
+                  <p><a class="btn btn-lg btn-primary" href="<?php the_permalink(); ?>" role="button">Read More...</a></p>
+                </div>
+              </div>
+            <?php endwhile; endif; ?>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <?php } wp_reset_query(); ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <h1 class="text-center">Most Recent</h1>
           <?php $args = array("posts_per_page" => 5); ?>
           <?php $wp_query = new WP_Query($args); ?>

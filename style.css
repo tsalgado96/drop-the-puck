@@ -165,6 +165,36 @@ HERO LANDING SECTION
 
 /*
 ===============================================
+FRONT PAGE CAROUSEL
+===============================================
+*/
+.carousel {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.carousel .item {
+  background: #0b0b0b;
+  width: 100%;
+}
+
+.carousel-inner .item {
+
+}
+
+.carousel-inner .item img{
+  margin: 0 auto;
+  width: 100%;
+  opacity: .7;
+}
+
+a.carousel-control {
+
+}
+
+
+/*
+===============================================
 FRONT PAGE PODCASTS SECTION
 ===============================================
 */
