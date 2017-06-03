@@ -81,7 +81,7 @@
               <?php the_post_thumbnail(); ?>
             </div>
             <h3 class="text-center"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-            <h4 class="text-center"><?php the_date(); ?> | <?php the_author(); ?></h4>
+            <h4 class="text-center"><?php the_date(); ?> &vert; <?php the_author(); ?></h4>
             <p class="text-center"><?php the_excerpt(); ?></p>
           </div>
 
@@ -106,9 +106,27 @@
             <span class="podcast-title">The Pilot</span>
           </div>
 
+          <div class="blog-sidebar">
+            <?php if(is_active_sidebar('sidebar')) : ?>
+              <?php dynamic_sidebar('sidebar'); ?>
+            <?php endif; ?>
+          </div><!-- /.blog-sidebar -->
+
         </div>
-      </div><!-- /.row -->
-    </div><!-- /.container -->
+      </div><!-- /.blog-main -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
 
+    <footer class="text-center">
+      <p> <?php bloginfo('name'); ?> &nbsp;&copy;&nbsp; <?php echo Date('Y'); ?></p>
+    </footer>
+    <?php wp_footer(); ?>
 
-<?php get_footer(); ?>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="<?php bloginfo('template_url'); ?>/js/jquery-3.2.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="<?php bloginfo('template_url'); ?>/js/bootstrap.js"></script>
+    <!-- Main JS File -->
+    <script src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
+  </body>
+</html>

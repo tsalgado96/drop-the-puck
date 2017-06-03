@@ -39,11 +39,11 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php echo home_url(); ?>"><h3>What The Puck <span class="blue">?!</span></h3></a>
+            <a class="navbar-brand"><h3>Drop The Puck <span class="blue">.</span></h3></a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
-         <div class="blog-nav collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
+         <div class="blog-nav collapse navbar-collapse text-center navbar-right" id="bs-example-navbar-collapse-1">
            <?php
              wp_nav_menu( array(
                'menu'              => 'primary',
@@ -52,7 +52,7 @@
                'container'         => 'div',
                'container_class'   => 'collapse navbar-collapse blog-nav-item',
                'container_id'      => 'bs-example-navbar-collapse-1',
-               'menu_class'        => 'nav navbar-nav navbar-right',
+               'menu_class'        => 'nav navbar-nav',
                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
                'walker'            => new WP_Bootstrap_Navwalker())
              );

@@ -21,24 +21,25 @@ GLOBAL STYLING
   font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 html, body{
   background: #dfdfdf;
 }
 
-.blue {
-  color: #0038A8;
-}
-
-.container {
-  padding: 0 25px;
+.post-container {
+  margin-top: 100px;
 }
 
 .section-heading {
   font-weight: 300;
   font-size: 2em;
   color: #4d4d4d;
+}
+
+.blue {
+  color: #0038A8;
 }
 
 /*
@@ -89,13 +90,17 @@ MAIN NAVIGATION
   color: #fff;
 }
 
+.navbar-header a {
+  cursor: default;
+}
+
 .navbar-header h3 {
   padding: 0;
   margin: 0;
 }
 
 .navbar .navbar-toggle .icon-bar {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .navbar-nav li {
@@ -104,6 +109,22 @@ MAIN NAVIGATION
 
 ul.nav a:hover {
   background: none;
+}
+
+
+/*
+===============================================
+FOOTER
+===============================================
+*/
+footer {
+  background-color: #111111;
+  color: #b9b9b9;
+}
+
+footer p {
+  padding: 30px 0;
+  margin: 0;
 }
 
 
@@ -202,6 +223,11 @@ FRONT PAGE CAROUSEL
   opacity: .6;
 }
 
+.carousel-inner .carousel-caption h1 {
+  font-weight: 300;
+  font-size: 3em;
+}
+
 
 /*
 ===============================================
@@ -231,6 +257,7 @@ FRONT PAGE PODCASTS SECTION
   font-size: 16px;
 }
 
+
 /*
 ===============================================
 POSTS
@@ -248,4 +275,70 @@ POSTS
 .post-thumb img{
   width: 100%;
   height: auto;
+}
+
+.post-gallery {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.post-gallery h2 {
+  color: #fff;
+}
+
+
+/*
+===============================================
+SINGLE POSTS
+===============================================
+*/
+.comments {
+  border: 1px #ccc solid;
+  padding: 10px;
+  margin-bottom:20px;
+  margin-top: 10px;
+}
+
+.comments h3, .comments h2 {
+  background: #0038A8;
+  color: #fff;
+  padding: 5px;
+}
+
+.comment-body {
+  border: #ccc solid 1px;
+  margin-bottom: 10px;
+  padding: 20px 10px;
+}
+
+.comment-meta {
+  background: #0038A8;
+  color: #fff;
+  padding: 10px;
+  overflow: auto;
+}
+
+.comment-meta a {
+  color: #fff;
+}
+
+.comment-meta img {
+  float: left;
+  margin-right: 10px;
+}
+
+.comment-reply-link {
+  background: #0038A8;
+  color: #fff;
+  display: inline-block;
+  padding: 10px 15px;
+}
+
+.comment-form input, .comment-form textarea {
+  width: 100%;
+  padding: 4px;
+  border: #ccc solid 1px;
+  margin-bottom: 15px;
 }

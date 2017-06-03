@@ -5,10 +5,13 @@
 
           <?php if(have_posts()) : ?>
             <?php while(have_posts()) : the_post(); ?>
-              <?php get_template_part('content', get_post_format()); ?>
+              <div class="blog-post">
+                <h2 class="blog-post-title text-center"><?php the_title(); ?></h2>
+                <?php the_content(); ?>
+              </div><!-- /.blog-post -->
             <?php endwhile; ?>
           <?php else : ?>
-            <p><?php __('No Posts Found'); ?></p>
+            <p><?php __('No Page Found'); ?></p>
           <?php endif; ?>
 
         </div><!-- /.blog-main -->
